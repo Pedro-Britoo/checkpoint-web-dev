@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Next</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__titulo">PrimeNext</h1>
+        <p class="header__sub">Engenheiros de Software · São Paulo, SP</p>
+    </header>
+
+    <nav class="nav">
+        <a href="#sobre"        class="nav__link">Início</a>
+        <a href="#projetos"     class="nav__link">Projetos</a>
+        <a href="#calculadora"  class="nav__link">Calculadora</a>
+        <a href="#contato"      class="nav__link">Contato</a>
+    </nav>
+
+    <section class="secao" id="sobre">
+        <h2 class="secao__titulo">Sobre Nós</h2>
+        <img
+            class="perfil__foto"
+            src="PrimeNext.jpeg"
+            alt="Foto da equipe PrimeNext"
+            onerror="this.src='https://placehold.co/120x120/374151/ffffff?text=:)'"
+        />
+        <p class="secao__texto">
+            Somos uma equipe de engenheiros de software apaixonados por tecnologia.
+            Criamos soluções inovadoras com HTML, CSS e JavaScript puro.
+        </p>
+    </section>
+
+    <section class="secao" id="habilidades">
+        <h2 class="secao__titulo">Habilidades</h2>
+            <ul class="lista">
+            <li class="lista__item">HTML5</li>
+            <li class="lista__item">CSS3</li>
+            <li class="lista__item">JavaScript</li>
+            <li class="lista__item">Git &amp; GitHub</li>
+            <li class="lista__item">DOM Manipulation</li>
+        </ul>
+    </section>
+
+    <section class="secao" id="projetos">
+        <h2 class="secao__titulo">Projetos</h2>
+        <div class="grid">
+            <div class="card">
+                <h3 class="card__nome">Página Pessoal</h3>
+                <p class="card__desc">Site criado 100% com JavaScript.</p>
+            </div>
+            <div class="card">
+                <h3 class="card__nome">To-Do List</h3>
+                <p class="card__desc">Lista de tarefas com localStorage.</p>
+            </div>
+            <div class="card">
+                <h3 class="card__nome">Calculadora</h3>
+                <p class="card__desc">Calculadora com operações básicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao secao--centro">
+        <h2 class="secao__titulo">Interatividade</h2>
+        <p class="contador__display" id="contadorDisplay">0</p>
+        <button class="btn" id="btnContador">Clique aqui!</button>
+    </section>
+
+  <section class="secao secao--centro" id="calculadora">
+    <h2 class="secao__titulo">Calculadora</h2>
+    <div class="calc">
+      <div class="calc__display" id="calcDisplay">0</div>
+      <div class="calc__teclado" id="calcTeclado">
+        <button class="calc__btn calc__btn--acao" data-acao="limpar">C</button>
+        <button class="calc__btn calc__btn--acao" data-acao="sinal">+/−</button>
+        <button class="calc__btn calc__btn--acao" data-acao="porcentagem">%</button>
+        <button class="calc__btn calc__btn--op"   data-op="/">÷</button>
+
+        <button class="calc__btn" data-num="7">7</button>
+        <button class="calc__btn" data-num="8">8</button>
+        <button class="calc__btn" data-num="9">9</button>
+        <button class="calc__btn calc__btn--op"   data-op="*">×</button>
+
+        <button class="calc__btn" data-num="4">4</button>
+        <button class="calc__btn" data-num="5">5</button>
+        <button class="calc__btn" data-num="6">6</button>
+        <button class="calc__btn calc__btn--op"   data-op="-">−</button>
+
+        <button class="calc__btn" data-num="1">1</button>
+        <button class="calc__btn" data-num="2">2</button>
+        <button class="calc__btn" data-num="3">3</button>
+        <button class="calc__btn calc__btn--op"   data-op="+">+</button>
+
+        <button class="calc__btn calc__btn--zero" data-num="0">0</button>
+        <button class="calc__btn" data-num=".">.</button>
+        <button class="calc__btn calc__btn--igual" data-acao="igual">=</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="contato">
+    <h2 class="secao__titulo">Contato</h2>
+    <form class="form" id="formContato">
+      <div class="form__grupo">
+        <label class="form__label" for="nome">Seu nome</label>
+        <input class="form__input" type="text"  id="nome"  placeholder="Seu nome" />
+      </div>
+      <div class="form__grupo">
+        <label class="form__label" for="email">seu@email.com</label>
+        <input class="form__input" type="email" id="email" placeholder="seu@email.com" />
+      </div>
+      <div class="form__grupo">
+        <label class="form__label" for="mensagem">Sua mensagem...</label>
+        <textarea class="form__input" id="mensagem" placeholder="Sua mensagem..." rows="4"></textarea>
+      </div>
+      <button class="btn" type="submit">Enviar</button>
+      <p class="form__feedback" id="formFeedback"></p>
+    </form>
+  </section>
+
+    <footer class="footer">
+        <p>© <span id="ano"></span> Douglas Patriota, Pedro Henrique, Octavio Kal, Vitor Cintra — Feito com HTML, CSS e JavaScript</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
