@@ -156,3 +156,26 @@ document.getElementById('ano').textContent = new Date().getFullYear();
     }
   });
 }());
+
+(function() {
+  var overlay  = document.getElementById('loginOverlay');
+  var form     = document.getElementById('loginForm');
+  var feedback = document.getElementById('loginFeedback');
+
+  var EMAIL_CORRETO = 'primenext@gmail.com';
+  var SENHA_CORRETA = 'primenext';
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var email = document.getElementById('loginEmail').value.trim();
+    var senha = document.getElementById('loginSenha').value;
+
+    if (email === EMAIL_CORRETO && senha === SENHA_CORRETA) {
+      overlay.classList.add('login--saindo');
+      setTimeout(function() { overlay.style.display = 'none'; }, 400);
+    } else {
+      feedback.textContent = 'E-mail ou senha incorretos.';
+    }
+  });
+}());
