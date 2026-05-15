@@ -206,3 +206,27 @@ textarea.form__input { resize: vertical; }
   border-top: 1px solid var(--borda);
   margin-top: 3rem;
 }
+
+.login {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .4s;
+}
+.login--saindo { opacity: 0; pointer-events: none; }
+.login__card {
+  background: var(--surface);
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 360px;
+}
+.login__titulo { font-size: 1.8rem; font-weight: 800; margin-bottom: .3rem; }
+.login__sub    { color: var(--muted); font-size: .9rem; margin-bottom: 1.5rem; }
+.login__form   { display: flex; flex-direction: column; gap: .9rem; }
+.login__feedback { font-size: .85rem; min-height: 1.2rem; color: #ef4444; }
